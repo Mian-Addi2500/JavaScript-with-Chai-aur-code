@@ -4,7 +4,7 @@ const randomColor = function () {
   let color = "#";
   //Run loop 0 to 6 for storing 6 value in color bcs hexa color haing 6 value
   for (let i = 0; i < 6; i++) {
-    //This get hex value from 1-16 position in hex varable and stor in color one by one
+    //This get hex value from 1-16 position in hex varable and stor in color one by one and we multiply by 16 beacuse these are "0123456789ABCDEF" 16 in numbers
     color += hex[Math.floor(Math.random() * 16)];
   }
   return color;
