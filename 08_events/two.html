@@ -10,11 +10,26 @@
     <button id="stop">Stop</button>
   </body>
   <script>
+    const titles = ["Welcome to Js ", "Chai aur code "];
+    let currentIndex = 0;
+    const aSpan = document.querySelector("h1");
+
+    const changeMe = setInterval(() => {
+      aSpan.innerHTML = titles[currentIndex];
+      currentIndex = (currentIndex + 1) % titles.length;
+    }, 2000);
+
+    /*
+
+  by thismethod only one time value change but about every time value changes 
+
     const changeH1 = () => {
       document.querySelector("h1").innerHTML = "Welcome to Js ";
     };
-    const changeMe = setTimeout(changeH1, 2000); 
 
+    const changeMe1 = setTimeout(changeH1, 2000);
+
+    */
     document.querySelector("#stop").addEventListener("click", () => {
       clearTimeout(changeMe); // when this called setTimeout do not works
       console.log("Stopped");
