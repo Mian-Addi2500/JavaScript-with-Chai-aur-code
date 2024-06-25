@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure aur chai</title>
+  </head>
+  <body style="background-color: #313131">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+
+  <script>
+    // lexical scoping
+    // This is the concept of we can acess the value of outer fuction to inner fuction but not access value of outer function to globel context. Let's Explore this concept
+
+    /*
+    function init() { // outer function
+        let name = "Mozilla"; 
+        function displayName() {// inner function
+            console.log(name); // access value (name) of outer function to inner function
+        }
+        displayName();
+    }
+    init();
+    console.log(name); // this will error bcz we try to access outer function value in globel context or out side from outer function
+
+    */
+
+    //an other example of lexical context
+
+    /*
+    function outer(){// outer fuction (parent function)
+        let username = "hitesh"
+        console.log("OUTER", secret);
+        function inner(){// inner function (chlid 1 function)
+            let secret = "my123"
+            console.log("inner", username);// access parent function variable
+        }
+        function innerTwo(){// inner function (chlid 2 function)
+            console.log("innerTwo", username);// access parent function variable
+            console.log(secret);// try to access child 2 function variable but error comes this shows chlid to child access is not possible 
+        }
+        inner()
+        innerTwo()
+
+    }
+    outer()
+    console.log("TOO OUTER", username);// try outer function in globel context which is not possible
+    */
+    //Closure
+    // in clouser we return inner fuction
+
+    /*function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;// inner function return completly with exicuation context and we say that with complet lexical context return fuction this approch called closure
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+    */
+  </script>
+  <script>
+    // Real World seneriou of Closure
+    /* 
+
+    //In this example we change easily background color by clicking buttons but this time we have 2 buttons but if client say add 500 buttons and i give you array of colors then we should be confused and we not repet copy paste method which is occuward
+
+     document.getElementById("orange").onclick = function(){
+        document.body.style.backgroundColor = `orange`
+    }
+    document.getElementById("green").onclick = function(){
+        document.body.style.backgroundColor = `green`
+    }
+*/
+    //btn reference access nessary but onclick seneriou sholud be one
+    function clickHandler(color) {
+      // document.body.style.backgroundColor = `${color}`
+
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange");
+    document.getElementById("green").onclick = clickHandler("green");
+  </script>
+</html>

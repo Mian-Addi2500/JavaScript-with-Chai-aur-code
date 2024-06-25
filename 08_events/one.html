@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>htnml Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // 2nd approch of click an item is
+    // document.querySelector("#owl").onclick = function () {
+    //   alert("click element by 2nd approch");
+    // };
+
+    // 3rd approch of click an item
+    document.getElementById("owl").addEventListener(
+      "click",
+      function () {
+        //alert("click element by 3rd approch");
+      },
+      false
+    );
+
+    //   diff b/w event bubling and event captchring
+
+    // Event Bubbling using of( false )
+
+    document.getElementById("images").addEventListener(
+      "click",
+      function () {
+        //console.log("Ul clicked");
+      },
+      false
+    );
+    document.getElementById("owl").addEventListener(
+      "click",
+      function () {
+        // console.log("owl clicked");
+      },
+      false
+    );
+    // NOTE: In Bubbling behavvour Element go from Buttom to High
+
+    //   **********************end *****************
+
+    // Captecharing Event using of (True )
+
+    document.getElementById("images").addEventListener(
+      "click",
+      function () {
+        //console.log("Ul clicked 2");
+      },
+      true
+    );
+    document.getElementById("owl").addEventListener(
+      "click",
+      function () {
+        // this is used to stop any element to propogate in bubbling only this element to show
+        // e.stopPropagation();
+        // console.log("owl clicked 2");
+      },
+      true
+    );
+    // NOTE: In Captuchaing behavvour Element go from  High to Buttom
+
+    //   **********************end *****************
+
+    // using privent default  to prevent action which do usualy by defalt
+    document.querySelector("#google").addEventListener("click", function (e) {
+      //console.log("google clicked");
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    // ******************** Simple Project to Remove Images By Clicking on Image ************
+    document.querySelector("ul").addEventListener(
+      "click",
+      function (e) {
+        let removeIt = e.target.parentNode; //e.target show target  that click i.e img but parentNode get complet li with it
+        if (e.target.tagName === "IMG") {
+          // tagName get specific tag only and li is differ Tag
+          removeIt.remove();
+        }
+      },
+      false
+    );
+  </script>
+</html>
