@@ -1,4 +1,4 @@
-// singleton : creating object from constructor is called singleton mean ya apni trha ka sirf aik hi object h is jesa or ni h so it mean if we made object from literals singleton not made but object created from constructor singoltons made [object.create] this is constructor method of object creationg or isi ky ander hi singelton bnta h
+// singleton : creating object from constructor is called singleton mean ya apni trha ka sirf aik hi object h is jesa or ni h so it mean if we made object from literals, singleton not made but object created from constructor than singoltons made [object.create] this is constructor method of object creating or isi ky ander hi singelton bnta h
 
 //object declerations methods 1) object literals and 2)constructor  by both ways object created but differ is singleton only
 
@@ -7,7 +7,7 @@
 //This is a declearation of symbole data type
 const mySym = Symbol("key1");
 
-// [object is key and value pair] the need of object is that when in array we access value through only indexing of array but in object we give keys to values which give us better approch to access aesly by understaing the key of our desire value
+// [object is key and value pair] the need of object is that when in array we access value through only indexing of array but in object we give keys to values which give us better approch to access easly by understaing the key of our desire value
 const JsUser = {
   name: "Hitesh",
   "full name": "Hitesh Choudhary",
@@ -83,21 +83,21 @@ const obj4 = { 5: "a", 6: "b" };
 
 //The above concept of concatnation is rarely used but this SPREAD concept used which is used in array same as here in object too
 const obj3 = { ...obj1, ...obj2 }; // this is spreed method
-console.log(obj3); //the output is: { 1: "a", 2: "b",3: "a", 4: "b"]
+console.log(obj3); //the output is: { 1: "a", 2: "b",3: "a", 4: "b"}
 
 //when values comes from databases then the data mostly comes in the form of array
 const users = [
   {
     id: 1,
-    email: "h@gmail.com",
+    email: "h1@gmail.com",
   },
   {
-    id: 1,
-    email: "h@gmail.com",
+    id: 2,
+    email: "h2@gmail.com",
   },
   {
-    id: 1,
-    email: "h@gmail.com",
+    id: 3,
+    email: "h3@gmail.com",
   },
 ];
 
