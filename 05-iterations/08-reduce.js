@@ -5,9 +5,9 @@ const myNums = [1, 2, 3];
 const myTotals = myNums.reduce(function (acc, currval) {
   console.log(`acc: ${acc} and currval: ${currval}`);
   return acc + currval;
-}, 0); // acc is used to return value in start is value is 0 which we give and currval is value of an aray
+}, 0); // acc is used to return value in start and the value at start is 0 which we give and currval is value of an aray
 
-// this is aarow fuction in cal back function of reduce but its result is same the obove function
+// this is aarow fuction in call back function of reduce but its result is same the obove function
 const myTotal = myNums.reduce((acc, curr) => acc + curr, 0);
 
 console.log(myTotal);

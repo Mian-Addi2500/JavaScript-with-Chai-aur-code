@@ -47,7 +47,7 @@ const books = [
   { title: "Book Nine", genre: "Non-Fiction", publish: 1981, edition: 1989 },
 ];
 
-let userBooks = books.filter((bk) => bk.genre === "History"); // this is implesite return of arrow function and we filter history books(objects) in userBooks variabe
+let userBooks = books.filter((bk) => bk.genre === "History"); // this is implesite return of arrow function there we no need to write return keyword and we filter history books(objects) in userBooks variabe
 
 userBooks = books.filter((bk) => {
   return bk.publish >= 1995 && bk.genre === "History"; // chcking condition and return perfect value

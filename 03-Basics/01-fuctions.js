@@ -17,7 +17,7 @@ sayMyName();
 function addTwo(number1, number2) {
   //number1 and number2 are parameter
 
-  console.log(number1 + number2); // by this value shown in function but it does not return alues
+  console.log(number1 + number2); // by this value shown in function but it does not return values
 }
 const results = addTwo(3, 5); // 3 and 5 are arrguments and output 8
 
@@ -44,7 +44,7 @@ function loginUserMessage(username = "sam") {
 
 console.log(loginUserMessage("hitesh"));
 
-// made a function in which we do not know how much parameter passed by user for this we made this function and this problem mostly comes in online shoping in that user purchaes many thing we do not know execit no of items
+// made a function in which we do not know how much parameter passed by user for this we made this function and this problem mostly comes in online shoping in that user purchaes many thing we do not know execit number of items
 
 function calculateCartPrice(val1, val2, ...num1) {
   // in this three dots ...num1 is rest operator

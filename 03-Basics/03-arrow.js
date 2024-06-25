@@ -56,7 +56,7 @@ chai();
 // const addTwo = (num1, num2) => ( num1 + num2 )// this is same as above in line # 54 both metheds are prefect
 //Note this method is mostly used in REACT JS
 
-const addTwo = (num1, num2) => ({ username: "hitesh" }); // returning object in Imeplesit Retunr arrow function
+const addTwo = (num1, num2) => ({ username: "hitesh" }); // returning object in Imeplesit Return arrow function
 
 console.log(addTwo(3, 4));
 

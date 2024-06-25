@@ -20,7 +20,7 @@ coding.forEach((item) => {
 function printMe(item) {
   console.log(item);
 }
-coding.forEach(printMe); // only give referance of function not exicute function
+coding.forEach(printMe); // only give referance of function, not exicute function
 
 //ForEach give not item only it should b give us iteam value , index and complet array too but complete array is not mostly used
 
