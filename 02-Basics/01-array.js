@@ -28,7 +28,7 @@ myArr.push(6); // add value 6 at end of array now myArr is [0,1,2,3,4,5,6]
 myArr.push(7); //add 7 after 6 [0,1,2,3,4,5,6,7]
 myArr.pop(); //remove last value of array [0,1,2,3,4,5,6]
 
-myArr.unshift(9); //add value at start [9,0,1,2,3,4,5,6,7] but this is mostly not used in big array bcz when value add at strat the other value index changes which is not good and loaded paractes
+myArr.unshift(9); //add value at start [9,0,1,2,3,4,5,6,7] but this is mostly not used in big array bcz when value add at start the other value index changes which is not good and loaded paractes
 
 myArr.shift(); // remove value from start
 
