@@ -68,7 +68,7 @@ promiseFour
     console.log(error);
   })
   .finally(() => {
-    // this method shows after somethime x time of amount that the task you want in promise is finally done?
+    // this method shows after sometime x time of amount that the task you want in promise is finally done?
     console.log("The promise is ether resolve or rejected");
   });
 
